@@ -2,7 +2,7 @@ package PearsonChapter11.Assignment1;
 
 //************************************
 //    Name: Ronald Rajski
-//    Classs: COSC 1174
+//    Classs: COSC 1174-48L
 //    Assignment: Minecraft Blocks
 //    Date: 9/5/2021
 //
