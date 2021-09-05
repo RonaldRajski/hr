@@ -1,5 +1,18 @@
 package PearsonChapter11;
 
+
+//-color: String
+//        -filled: boolean
+//        -dateCreated: java.util.Date
+//        +GeometricObject()
+//        +GeometricObject(color: String, filled: boolean)
+//        +getColor(): String
+//        +setColor(color: String): void
+//        +isFilled(): boolean
+//        +setFilled(filled: boolean): void
+//        +getDateCreated(): java.util.Date
+//        +toString(): String
+
 public class GeometricObject1 {
 
     private String color = "white";
@@ -8,7 +21,7 @@ public class GeometricObject1 {
 
 
 //default constructor
-    public GeometricObject(){
+    public GeometricObject1(){
         dateCreated = new java.util.Date();
 
     }
@@ -40,7 +53,7 @@ public class GeometricObject1 {
     }
 
     public String toString(){
-        return "created on " + dateCreated + "\ncolor" + color + " and filled: " + filled;
+        return "created on " + dateCreated + "\ncolor " + color + " and filled: " + filled;
     }
 
 

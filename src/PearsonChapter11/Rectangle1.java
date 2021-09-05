@@ -1,5 +1,19 @@
 package PearsonChapter11;
 
+
+//Rectangle
+//        -width: double
+//        -height: double
+//        +Rectangle()
+//        +Rectangle(width: double, height: double)
+//        +Rectangle(width: double, height: double color: String, filled: boolean)
+//        +getWidth(): double
+//        +setWidth(width: double): void
+//        +getHeight(): double
+//        +setHeight(height: double): void
+//        +getArea(): double
+//        +getPerimeter(): double
+
 public class Rectangle1 extends GeometricObject1 {
 //when you place extends you crreate a superclass
     private double width;
@@ -8,7 +22,7 @@ public class Rectangle1 extends GeometricObject1 {
 
 //    Constructors
 
-    public Rectangle1{
+    public Rectangle1(){
 
     }
 
