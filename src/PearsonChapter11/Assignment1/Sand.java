@@ -32,7 +32,7 @@ package PearsonChapter11.Assignment1;
 
 //        Next, create 2 constructors for sand, 1 default, and 1 that takes in all 5 data fields. (note: both constructors should set the data fields to the same values, as sand must have these values to be sand)
 //        Now override all the methods inherited from Block. For isDestroyed, you should invoke getHardness(), and if it is less than 1, return the itemDrop (we won’t worry about actually destroying the block in this class)
-//        Finally, write a test class containing the main method, which creates a sand block, and asks the user if they have a shovel. If they do not, they cannot break the block, and they must move on, but if they do, they can start digging. Each digging action should reduce the sand’s hardness until it is below 1, in which case the user is given their sand, and they move on.
+
 
 
 
@@ -50,8 +50,68 @@ public class Sand extends Block{
 //    Item that will drop if block is destroyed
     String itemDrop;
 
-//    Makes a new Sand Block with Default values
+//    Makes a new Sand Block with Default values-Constructor 1
+    public Sand(){
+        super(55, "sand", true, 2);
+        this.blockId = super.blockId;
+        this.blockName = super.blockName;
+        this.toolNeeded = super.toolNeeded;
+        this.itemDrop = "sand";
+    }
+    public Sand(int blockId, String blockName, boolean toolNeeded, int hardness, String itemDrop){
+        this.blockId = blockId;
+        this.blockName= blockName;
+        this.toolNeeded= toolNeeded;
+        this.hardness = hardness;
+        this.itemDrop = itemDrop;
+    }
 
+//    getters and setters
+
+//    Getter for hardness level.
+//    return for remaining hardness level
+    @Override
+    public int getHardness() {
+        return hardness;
+    }
+
+//    Sets hardness level to integer value
+    @Override
+    public void setHardness(int hardness) {
+        this.hardness = hardness;
+    }
+    //    Determines if block was destroyed
+//    returns a string indicating whether or not the block was destroyed
+
+    public String isDestroyed() {
+//        hardness value returned by getHardness
+        int thisHardness = getHardness();
+
+        ////        What is dropped when itmem is isDestroyed
+        String dropped;
+
+        if(thisHardness <= 0) {
+            if(this.itemDrop != null) {
+                dropped = this.itemDrop;
+            } else {
+                dropped = "nothing";
+            }
+        }
+        else{
+            dropped = "nothing";
+        }
+
+        return dropped;
+    }
+    public String toString() {
+        return "\n\nSand <<Block>> {" + "\n\n" +
+                "  blockId: " + blockId + "\n\n" +
+                "  blockName: " + blockName + "\n\n" +
+                "  toolNeeded: " + toolNeeded + "\n\n" +
+                "  hardness: " + hardness + "\n\n" +
+                "  itemDrop: " + itemDrop + "\n\n" +
+                "}\n\n";
+    }
 
 
 }
