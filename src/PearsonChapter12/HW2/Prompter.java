@@ -8,8 +8,6 @@ package PearsonChapter12.HW2;
 //        Date: September 12, 2021
 //        **********************************
 
-import java.lang.ref.Cleaner;
-import java.util.Locale;
 import java.util.Scanner;
 //Displays information to the user
 
@@ -19,9 +17,10 @@ public class Prompter {
 
 //    prompts user with given String
 //    param output prints a prompt on a new line
-public void state(String output){
+public String state(String output){
     System.out.println("/n" + output);
 
+    return output;
 }
 
 //prompt user with given string
