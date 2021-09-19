@@ -7,5 +7,6 @@ package PearsonChapter13.HW3;
  * Date: 9-17-21
  ********************************************/
 
-public class Car extends Vehicle{
+public class StarterType{
+
 }
