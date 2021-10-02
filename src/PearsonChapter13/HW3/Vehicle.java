@@ -69,23 +69,6 @@ public abstract class Vehicle {
         this.whereToDrive = whereToDrive;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * Method which compares two vehicle's passenger limits and returns
      * the name of the one that holds more passengers
@@ -124,18 +107,10 @@ public abstract class Vehicle {
         return fasterVehicleReturn;
     }
 
-    /**
-     * Abstract method all vehicle classes will need to implement which
-     * describes how to start the vehicle
-     * @return String  a description of the vehicle starting
-     */
+//  abstract method to start vehicle
     public abstract void start();
 
-    /**
-     * Abstract method all vehicle classes will need to implement which
-     * describes how to stop the vehicle
-     * @return String  a description of the vehicle stopping
-     */
+// abstract method to stop vehicle
     public abstract void stop();
 
 }

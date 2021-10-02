@@ -7,34 +7,37 @@ package PearsonChapter13.HW3;
  * Date: 9-17-21
  ********************************************/
 
-public class Plane extends Vehicle implements WayToDrive, WayToFly{
+public class Truck extends Vehicle implements WayToDrive{
 
-//        # of Engines
+
+//        # of engines
         private int numberOfEngines;
 
-//        vehicle Name
+//       name of vehicle
         private String name;
 
-//        # of passengers
+//        # 0f passengers
         private int numberOfPassengers;
 
-//        Where to drive this vehicle
+//        where to drive
         private String whereToDrive;
 
 //        steering device
-        private SteeringDevice yoke = new SteeringDevice(new String[]{"left", "right", "straight", "up", "down"}, "yoke");
+        private SteeringDevice wheel = new SteeringDevice(new String[]{"left", "right", "straight"}, "steering wheel");
 
 //        type of starter
         private StarterType starterType;
 
 
-        public Plane(int numberOfEngines, String name, int numberOfPassengers, String whereToDrive, StarterType starterType) {
+        public Truck(int numberOfEngines, String name, int numberOfPassengers, String whereToDrive, StarterType starterType) {
             this.numberOfEngines = numberOfEngines;
             this.name = name;
             this.numberOfPassengers = numberOfPassengers;
             this.whereToDrive = whereToDrive;
             this.starterType = starterType;
         }
+
+//        getters and setters
 
         public int getNumberOfEngines() {
             return numberOfEngines;
@@ -68,12 +71,12 @@ public class Plane extends Vehicle implements WayToDrive, WayToFly{
             this.whereToDrive = whereToDrive;
         }
 
-        public SteeringDevice getYoke() {
-            return yoke;
+        public SteeringDevice getWheel() {
+            return wheel;
         }
 
-        public void setYoke(SteeringDevice yoke) {
-            this.yoke = yoke;
+        public void setWheel(SteeringDevice wheel) {
+            this.wheel = wheel;
         }
 
         public StarterType getStarterType() {
@@ -84,39 +87,33 @@ public class Plane extends Vehicle implements WayToDrive, WayToFly{
             this.starterType = starterType;
         }
 
-//        starter
+//        Starts the car
         public void start() {
             starterType.start(name);
         }
 
-//        kill switch
+//        Stops the car
         public void stop() {
             starterType.stop(name);
         }
 
-//        go left
+//        turns left
         public void turnLeft() {
-            yoke.steer("left");
+            wheel.steer("left");
         }
 
-//        go right
+//      turns right
         public void turnRight() {
-            yoke.steer("right");
+            wheel.steer("right");
         }
 
-//        go straight
+//       go straight ahead
         public void goStraight() {
-            yoke.steer("straight");
+            wheel.steer("straight");
         }
 
-//        go up
-        public void up() {
-            yoke.steer("up");
-        }
+    }
 
-//       go down
-        public void down() {
-            yoke.steer("down");
-        }
 
-}
+
+

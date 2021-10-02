@@ -15,7 +15,7 @@ public interface WayToDrive {
 //    describes direction you are turning
     void turnRight();
 
-//describbes moving forward
-    void g0Straight();
+//describes moving forward
+    void goStraight();
 
 }

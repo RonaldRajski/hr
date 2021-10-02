@@ -9,11 +9,11 @@ package PearsonChapter13.HW3;
  ********************************************/
 
 //    Method for steering toward a given direction
-//    Parameter Directions will be "north", "south", "east", "west"
-
-
-
-
+//    Parameter Directions will be "left ", "right", "stright", "up", "down"
 public interface WayToSteer {
+
+//     Method for steering toward a given direction
+
+
     public void steer(String direction);
 }

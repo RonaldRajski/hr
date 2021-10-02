@@ -7,7 +7,7 @@ package PearsonChapter13.HW3;
  * Date: 9-17-21
  ********************************************/
 
-public class Boat extends Vehicle implements WayToSteer{
+public class Boat extends Vehicle implements WayToSteer {
 
 //    #of Engines
     private int numberOfEngines;
@@ -26,7 +26,7 @@ public class Boat extends Vehicle implements WayToSteer{
 
 //    Type of Steering device
 
-    private SteeringDevice rudder = new SteeringDevice(new String[]{"north", "south", "east", "west"}, "rudder");
+    private SteeringDevice rudder = new SteeringDevice(new String[]{"forward", "starboard", "port",}, "rudder");
 
 //    starter type
 
@@ -111,24 +111,28 @@ public class Boat extends Vehicle implements WayToSteer{
 
     }
 
-//    turn North
-    public void turnNorth(){
-        rudder.steer("north");
+//    turn Left
+    public void turnPort(){
+        rudder.steer("port");
     }
 
-//    turn South
-    public void turnSouth(){
-        rudder.steer("south");
+//    turn Right
+    public void turnStarboard(){
+        rudder.steer("starboard");
     }
 
-//    turn East
-    public void turnEast(){
-        rudder.steer("east");
+//    go forward
+    public void goStraight(){
+        rudder.steer("forward");
     }
 
-    //    turn West
-    public void turnWest(){
-        rudder.steer("west");
+    //    Reverse
+    public void turnAft(){
+        rudder.steer("aft");
+    }
+
+    @Override
+    public void steer(String direction) {
 
     }
 }
