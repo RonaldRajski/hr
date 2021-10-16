@@ -1,7 +1,8 @@
-package PearsonChapter18;
+package PearsonChapter18.TicTacToe;
 
 public class Main {
     public static void main(String[] args) {
+
         TicTacToe ticTacToe = new TicTacToe();
     }
 }

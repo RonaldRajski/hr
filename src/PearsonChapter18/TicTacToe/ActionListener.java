@@ -1,4 +1,4 @@
-package PearsonChapter18;
+package PearsonChapter18.TicTacToe;
 
 public interface ActionListener {
 }

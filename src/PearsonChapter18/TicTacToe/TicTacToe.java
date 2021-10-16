@@ -1,11 +1,12 @@
-package PearsonChapter18;
+package PearsonChapter18.TicTacToe;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.event.ActionListener;
 import java.util.*;
 import javax.swing.*;
 
-public class TicTacToe implements ActionListener, java.awt.event.ActionListener {
+public class TicTacToe implements ActionListener{
 
     Random random = new Random();
     JFrame frame = new JFrame();
@@ -88,20 +89,19 @@ public class TicTacToe implements ActionListener, java.awt.event.ActionListener 
 
     public void firstTurn() {
 
-
-//            try {
-//                Thread.sleep(2000);
-//            } catch (InterruptedException e) {
+        try {
+             Thread.sleep(2000);
+            } catch (InterruptedException e) {
 //                //Todo Auto-generated catch block
-//                e.printStackTrace();
-//            }
-//            if (random.nextInt(2) == 0) {
-//                player1_turn = true;
-//                textfield.setText("X Turn");
-//            } else {
-//                player1_turn = false;
-//                textfield.setText("O Turn");
-//            }
+                e.printStackTrace();
+        }
+            if (random.nextInt(2) == 0) {
+                player1_turn = true;
+                textfield.setText("X Turn");
+            } else {
+                player1_turn = false;
+                textfield.setText("O Turn");
+        }
 
     }
 
@@ -237,17 +237,17 @@ public class TicTacToe implements ActionListener, java.awt.event.ActionListener 
         }
 
 
-//        public void oWins ( int a, int b, int c){
-//            buttons[a].setBackground(Color.GREEN);
-//            buttons[b].setBackground(Color.GREEN);
-//            buttons[c].setBackground(Color.GREEN);
-//
-//            for (int i = 0; i < 9; i++) {
-//                buttons[i].setEnabled(false);
-//            }
-//            textfield.setText("O wins");
-//
-//        }
+        public void oWins ( int a, int b, int c){
+            buttons[a].setBackground(Color.GREEN);
+            buttons[b].setBackground(Color.GREEN);
+            buttons[c].setBackground(Color.GREEN);
+
+            for (int i = 0; i < 9; i++) {
+                buttons[i].setEnabled(false);
+            }
+            textfield.setText("O wins");
+
+        }
     }
 
 
