@@ -1,5 +1,6 @@
 package PearsonChapter19;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class UnboundedWildCardTest {
@@ -15,7 +16,26 @@ public class UnboundedWildCardTest {
 //    When the code is using methods in the generic class that doesn't demped on the type parameter. For example, List.size or List.clear, List.isEmpty etc.
 
     public static void main(String[] args) {
-        List<Integer> int
+        List<Integer> intList = Arrays.asList(12,60, 80, 30);
+        printElements(intList);
+
+        System.out.println("__________________________");
+        List<Double>doubleList = Arrays.asList(10.12, 110.8, 13.2, 12.70);
+        printElements(doubleList);
+
     }
+
+//    Method with Unbounded wildcard
+    private static void printElements(List<?>list){
+//    private static void printElements(List<Object>list){
+
+        for (Object element: list){
+            System.out.println(element);
+        }
+    }
+
+
+
+
 
 }
