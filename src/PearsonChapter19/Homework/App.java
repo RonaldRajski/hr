@@ -2,9 +2,9 @@ package PearsonChapter19.Homework;
 
 //******************************
 //        ** Ronald Rajski
-//        ** COSC 1174
-//        ** Shuffling and Sorting
-//        ** October 17, 2021
+//        ** class: COSC 1174
+//        ** Assignment Shuffling and Sorting
+//        ** Date: October 17, 2021
 //********************************
 
 
@@ -119,7 +119,7 @@ public class Main {
       -n  the size of the list
      */
     public static <E extends Comparable<E>> void sort(ArrayList<E> list, int n) {
-        // base case: if the size of the given list is 1, you have reached the end of sorting
+        // starting case: if the size of the given list is 1, you have reached the end of sorting
         if(n == 1) {
             return;
         }
@@ -210,13 +210,15 @@ class Rectangle implements Comparable<Rectangle> {
      *              > 0 if given Rectangle area is smaller,
      *              0 if given Rectangle area is equal
      */
-    public int compareTo(Rectangle that) {
-        if(getArea() != that.getArea()) {
-            return getArea() - that.getArea();
-        } else {
-            return 0;
-        }
+
+    public int compareTo(Rectangle that){
+       if(getArea() != that.getArea()){
+           return getArea() - that.getArea();
+       }else{
+           return 0;
+       }
 
     }
+
 }
 
